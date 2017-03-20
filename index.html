@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html ng-app="myApp" dir="rtl">
+
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<title>המסמכומט</title>
+	<link rel="icon" href="logo.png">
+
+</head>
+
+<body class="body" ng-controller="myCtrl">
+
+	<script src="index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>		
+	<script src="controllers/controller.js"></script>
+
+	<div class="input container">
+		<div class="input-box">
+			<h3>בחר תבנית:</h3>
+			<select class="templates" ng-model="template">
+				<option value=""></option>
+				<option value="date">תאריך</option>
+				<option value="header">כותרת</option>
+				<option value="paragraph">פסקה</option>
+				<option value="list">רשימה</option>
+			</select>
+			<button class="select" ng-click="addTemplate(template)">הוסף תבנית</button>
+			<button class="pdf" onclick="/*javascript:demoFromHTML2();*/ window.print();">צור PDF!</button>
+
+		</div>
+
+		<div id="body"></div>
+	</div>
+
+	<div id="document" class="document" ng-bind-html="documentHTML">
+	</div>
+</body>
+
+</html>
