@@ -25,8 +25,6 @@
 		<div class="input-box">
 			<div class="dropdown">
 		  		<button class="dropbtn">בחר תבנית</button>
-				<button class="pdf" onclick="window.print();">צור PDF!</button>
-
 				  <div class="dropdown-content">
 				    <a ng-click="addTemplate('date')">תאריך</a>
 				    <a ng-click="addTemplate('header')">כותרת</a>
@@ -34,6 +32,8 @@
 				    <a ng-click="addTemplate('list')">רשימה</a>
 				  </div>
 			</div>
+			<button class="pdf" onclick="window.print();">צור PDF!</button>
+
 			<!--
 			<select class="templates" ng-model="template">
 				<option value="date">תאריך</option>
